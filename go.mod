@@ -3,8 +3,8 @@ module golangtest
 go 1.18
 
 require (
-	github.com/opoccomaxao-go/event/v2 v2.0.1
-	github.com/stretchr/testify v1.7.0
+	github.com/opoccomaxao-go/event/v3 v3.0.0-alpha.2
+	github.com/stretchr/testify v1.7.1
 )
 
 require (
