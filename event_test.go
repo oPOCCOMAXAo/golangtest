@@ -7,7 +7,7 @@ import (
 )
 
 func TestEvent(t *testing.T) {
-	pool := event.NewPool()
+	pool := event.NewPool(event.PoolConfig{})
 
 	_ = pool
 }
