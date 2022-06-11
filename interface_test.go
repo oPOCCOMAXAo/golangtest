@@ -27,3 +27,11 @@ func TestInterfaceCast(t *testing.T) {
 	})
 	assert.Equal(t, (*float64)(nil), f)
 }
+
+func TestNilCast(t *testing.T) {
+	var test interface{}
+
+	val, ok := test.(map[string]interface{})
+	assert.False(t, ok)
+	assert.Nil(t, val)
+}
