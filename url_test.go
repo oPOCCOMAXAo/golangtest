@@ -17,3 +17,10 @@ func TestUrl(t *testing.T) {
 
 	assert.Equal(t, "double=1&double=2&single=1", val.Encode())
 }
+
+func TestUrlParse(t *testing.T) {
+	val, err := url.Parse("")
+	assert.NoError(t, err)
+
+	assert.NotNil(t, val)
+}

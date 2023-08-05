@@ -20,3 +20,12 @@ func TestJsonByteArray(t *testing.T) {
 
 	assert.Equal(t, `"AQIDBAUGBwg="`, string(data))
 }
+
+func TestJSONStringEmpty(t *testing.T) {
+	data, err := json.Marshal(struct {
+		A string `json:"a,omitempty"`
+		B string `json:"b,omitempty"`
+	}{B: "1"})
+	require.NoError(t, err)
+	assert.Equal(t, `{"b":"1"}`, string(data))
+}
